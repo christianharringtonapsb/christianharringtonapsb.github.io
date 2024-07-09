@@ -28,12 +28,12 @@ $(function () {
      * Comment the lines out to remove the grid
      */
 
-    // for (let i = 100; i < canvas.width; i += 100) {
-    //   createPlatform(i, canvas.height, -1, -canvas.height);
-    // }
-    // for (let i = 100; i < canvas.height; i += 100) {
-    //   createPlatform(canvas.width, i, -canvas.width, -1);
-    // }
+    for (let i = 100; i < canvas.width; i += 100) {
+      createPlatform(i, canvas.height, -1, -canvas.height);
+    }
+    for (let i = 100; i < canvas.height; i += 100) {
+      createPlatform(canvas.width, i, -canvas.width, -1);
+    }
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE BELOW THIS POINT///////////
@@ -44,26 +44,63 @@ $(function () {
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
 
+    //Vertical Columns
+    //first vertical column from left
+    createPlatform(100, 0, 10, 650);
+    //second vertical column from left
+    createPlatform(395, 175, 10, 575);
+    //third vertical column from left
+    createPlatform(700, 450, 10, 575);
+    //sixth vertical column from left
+    createPlatform(1390, 450, 10, 575);
 
+    //Platforms in initial chute
+    //bottom left horizontal platform (chute)
+    createPlatform(100, 610, 60, 5);
+    //bottom right horizontal platform (chute)
+    createPlatform(340, 480, 55, 5);
+    //middle left horizontal platform (chute)
+    createPlatform(100, 350, 60, 5);
+    //top horizontal platform (chute)
+    createPlatform(245, 220, 50, 5);
 
-    
+    //Box
+    //Left Roof
+    createPlatform(700, 450, 262, 10);
+    //Right Roof
+    createPlatform(1138, 450, 262, 10);
+    //Left Box Column
+    createPlatform(962, 175, 10, 285);
+    //Right Box Column
+    createPlatform(1128, 175, 10, 285);
+
+    //Extra Platforms
+    //horizontal platform in between middle of chute and box
+    createPlatform(525, 520, 55, 5);
+    createPlatform(630, 650, 10, 10);
+    createPlatform(920, 320, 50, 5);
+
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+    // createPlatform(_,_,_,_);
+
     // TODO 2
     // Create collectables
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
-
-
-
     // TODO 3
     // Create cannons
     // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
-
-
-
+    createCannon("bottom", 210, 1000);
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
