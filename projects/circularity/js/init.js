@@ -56,6 +56,12 @@ var init = function (window) {
       }
     }
 
+    //TODO 6 Challenge attempt below
+    var rightEdge = circle.x + circle.radius;
+    var leftEdge = circle.x - circle.radius;
+    var topEdge = circle.y - circle.radius;
+    var bottomEdge = circle.y + circle.radius;
+
     /* 
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
@@ -82,14 +88,6 @@ var init = function (window) {
       }
       // YOUR TODO 6 CODE ENDS HERE //////////////////////////
     };
-
-    //TODO 6 Challenge attempt below
-    var rightEdge = circle.x + circle.radius;
-    var leftEdge = circle.x - circle.radius;
-    var topEdge = circle.y + circle.radius;
-    var bottomEdge = circle.y - circle.radius;
-
-
 
 
     /////////////////////////////////////////////////////////////
