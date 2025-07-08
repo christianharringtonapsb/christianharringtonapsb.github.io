@@ -40,7 +40,7 @@ $(document).ready(function () {
   var shape = {
     color: "blue",
     shape: "circle",
-    repeat: 3,
+    repeat: 3
   };
   dataShapes.push(shape);
 
@@ -69,11 +69,22 @@ $(document).ready(function () {
   }
 
   // TODO 5-a: add a function that handles the bad display type
-function handleBad(data, repeat) {
-  repeat++;
-  setBackgroundWithMixed(data, repeat);
-  animationDetails.displayType = 3;
-}
+/*
+  function handleBad(data, repeat) {
+    repeat++;
+    setBackgroundWithMixed(data, repeat);
+    animationDetails.displayType = 3;
+  }
+  */
+
+  
+  function handleBad(data, repeat) {
+    resetDisplay();
+    currentIndex = Math.floor(Math.random() * dataShapes.length);
+    setBackgroundWithMixed(data, repeat);
+    animationDetails.displayType = 3;
+  }
+  
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
