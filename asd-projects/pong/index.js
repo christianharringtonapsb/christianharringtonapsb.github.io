@@ -28,23 +28,16 @@ function runProgram() {
 
   /* start here. create objects with properties that can
   be used to manipulate objects in the game
-  below. Compare to index.js for the walker
-  project. Consider the starting position of
-  each paddle as identied in the index.css file.
-
-  var rightPaddle = {
-    positionX: ,
-    positionY: ,
-    speedX: 0,
-    speedY: 0
-  }
-
-  var leftPaddle = {
-    positionX: ,
-    positionY: ,
-    speedX: 0,
-    speedY: 0
-  }
+  below. Create objects for leftPaddle,
+  rightPaddle, and ball using a factory
+  function. In the factory function, assign values
+  to properties using JQuery references to avoid
+  hard coding imaginary numbers (numbers without
+  obvious meaning). Compare to index.js for the walker
+  project to know what properties need to be included
+  in the factor function. Refernce index.css to assist
+  with knowing what properties to include.
+  */
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
